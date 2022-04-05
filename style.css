@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f3cdc4;
+}
+[class^='fas'],
+[class*=' fa-'] {
+  display: inline-block;
+  width: 100%;
+}
+.carousel-container {
+  position: relative;
+  margin: auto;
+  border: 4px solid black;
+  width: 800px;
+  overflow: hidden;
+}
+.carousel-container:hover a {
+  opacity: 1;
+  z-index: 100;
+}
+.carousel-container a {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  opacity: 0;
+}
+
+.carousel-container .prev {
+  top: 45%;
+  left: 0;
+}
+.carousel-container .next {
+  top: 45%;
+  right: 0;
+}
+.carousel {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  transform: translateX(-800px);
+}
+.carousel-slide {
+  width: 800px;
+  height: 500px;
+  padding: 10px;
+}
+.radio-button {
+  margin: 20px;
+  position: absolute;
+  z-index: 10;
+}
+.carousel-container .first-btn {
+  transform: translate(300px, 400px);
+}
+.carousel-container .second-btn {
+  transform: translate(350px, 400px);
+}
+.carousel-container .third-btn {
+  transform: translate(400px, 400px);
+}
+.carousel-container .fourth-btn {
+  transform: translate(450px, 400px);
+}
+.carousel-container:hover .radio-button {
+  opacity: 1;
+  cursor: pointer;
+}
+
+input[type='radio']:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  /* top: -2px;
+  left: -1px; */
+  /* position: relative; */
+  background-color: #ffa500;
+  content: '';
+  display: inline-block;
+  /* visibility: visible; */
+  border: 2px solid white;
+}
